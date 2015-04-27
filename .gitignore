@@ -1,0 +1,12 @@
+*.pyc
+*.log
+*.pid
+.DS_Store
+*/.DS_Store
+
+django_scraper/thumbnails/*
+dbs/
+items/
+logs/
+media/
+django_scraper/migrations/*

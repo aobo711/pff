@@ -1,0 +1,20 @@
+[
+    {% for n in news %}
+    {
+        "first_video": "{{ n.first_video }}",
+        "created_at" : "{{ n.created_at|date:'m月d日'  }}"
+        {% if n.tags %},"tags" : [{% for t in n.tags.all %}
+            { 
+                "name" : "{{ t.name }}",
+                "id" : "{{ t.id }}",
+                "color" : "{{ t.color }}"
+            }{% if not forloop.last %} , {% endif %}
+            {% endfor %}]
+        {% endif %},
+        "id": "{{ n.id }}",
+        "title": "{{ n.title}}",
+        "thumbnail": "{{ n.thumbnail }}",
+        "summary" : "{{ n.summary|escapejs }}"
+    }{% if not forloop.last %} , {% endif %}
+    {% endfor %}
+]

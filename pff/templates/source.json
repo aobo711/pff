@@ -1,0 +1,7 @@
+[
+    {% for n in sources %}
+    {
+        "name": "{{ n.scraper }}"
+    }{% if not forloop.last %} , {% endif %}
+    {% endfor %}
+]
