@@ -1,0 +1,10 @@
+branch-defaults:
+  default:
+    environment: pff-dev
+global:
+  application_name: work
+  default_ec2_keyname: aws_key
+  default_platform: Python 2.7
+  default_region: ap-northeast-1
+  profile: eb-cli
+  sc: null
