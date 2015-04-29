@@ -1,6 +1,8 @@
 branch-defaults:
   default:
     environment: pff-dev
+  master:
+    environment: pff-dev
 global:
   application_name: work
   default_ec2_keyname: aws_key
